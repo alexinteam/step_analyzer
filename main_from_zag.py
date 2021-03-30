@@ -144,6 +144,7 @@ if __name__ == '__main__':
     step_writer.Transfer(myCut1, STEPControl_StepModelType(STEPControl_AsIs))
     status = step_writer.Write(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'result', 'objects.stp'))
 
-    display.DisplayShape([myCut1], transparency=0.0)
+    display.DisplayShape([shp], color="yellow", transparency=0.5)
+    display.DisplayShape([myCut1], color="blue")
 
     start_display()

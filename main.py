@@ -39,9 +39,8 @@ if __name__ == '__main__':
     print('cones', cones)
     print('holes', holes)
 
-
-    # display.DisplayShape(cutFromParallelepiped, transparency=0.5, color="blue")
-    display.DisplayShape(shp, transparency=0.5, color="black")
+    display.DisplayShape(cutFromParallelepiped, transparency=0.5, color="blue")
+    display.DisplayShape(shp, color="yellow")
 
     # shp1 = read_step_file(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'result', 'objects.stp'))
 
