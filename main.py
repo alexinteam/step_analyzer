@@ -19,12 +19,14 @@ if __name__ == '__main__':
     display.SetSelectionModeFace()
     display.register_select_callback(recognize_clicked)
     p = os.path.dirname(os.path.abspath(__file__))
+    # open
     shp = read_step_file(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'step_examples', '21_141_sponka.stp'))
     get_boundingbox(shp)
 
     print('box dx, dy, dz:', get_dx_dy_dz(shp))
     cones, holes, newshp = detect_through_holes(shp, True)
 
+    # CUT from parallelepiped
     cutFromParallelepiped = cut_from_parallelepiped(shp, 0.001)
     step_writer = STEPControl_Writer()
     Interface_Static_SetCVal("write.step.schema", "AP242")
